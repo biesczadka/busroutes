@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 /**
  * Created by Martyna on 2016-12-07.
  */
- class RouteFactory {
+class RouteFactory {
 
-    public static Route createRoute(String line){
+    public static Route createRoute(String line) {
         List<String> items = new ArrayList<String>(Arrays.asList(line.split(" ")));
         int routeId = Integer.valueOf(items.get(0));
         items.remove(0);

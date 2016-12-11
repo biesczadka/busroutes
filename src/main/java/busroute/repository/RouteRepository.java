@@ -1,8 +1,8 @@
 package busroute.repository;
 
-import busroute.model.Route;
 import busroute.businessExceptions.FileFormatException;
 import busroute.businessExceptions.FileReadException;
+import busroute.model.Route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,7 +41,7 @@ public class RouteRepository {
                 routeList = lines.stream().map(line -> RouteFactory.createRoute(line)).collect(toList());
 
                 if (numberOfRoutes != routeList.size()) {
-                    logger.error("Error during reading file!");
+                    logger.error("File has wrong format!");
                     throw new FileFormatException();
                 }
 

@@ -55,7 +55,7 @@ class RouteRepositoryTest extends Specification {
         exception.message == "File has wrong format!"
 
         where:
-        fileName                   | _
+        fileName                                         | _
         "src\\test\\resources\\wrongFormatBusRoutes.txt" | _
         "src\\test\\resources\\notEnoughRoutes.txt"      | _
     }

@@ -15,14 +15,17 @@ public class DirectRouteDTO {
         this.direct_bus_route = direct_bus_route;
     }
 
+    @SuppressWarnings("unused")
     public int getDep_sid() {
         return dep_sid;
     }
 
+    @SuppressWarnings("unused")
     public int getArr_sid() {
         return arr_sid;
     }
 
+    @SuppressWarnings("unused")
     public boolean isDirect_bus_route() {
         return direct_bus_route;
     }

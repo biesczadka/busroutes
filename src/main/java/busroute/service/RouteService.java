@@ -13,7 +13,7 @@ public class RouteService {
     @Autowired
     RouteRepository routeRepository;
 
-    public boolean isDirectRoute(int start, int dest){
-    return routeRepository.getRoutes().stream().anyMatch(route -> route.isRoute(start, dest));
+    public boolean isDirectRoute(int start, int dest) {
+        return routeRepository.getRoutes().stream().anyMatch(route -> route.isRoute(start, dest));
     }
 }
