@@ -34,7 +34,7 @@ with JSON as a response:
   ]
 }
 ```
-The list of connections is in file whichs path is given at application start as argument.
+The list of connections is in file which path is given at application start as an argument.
 When file path arg is not present application won't start and will print info about missing arg on console.
 When arg is present the application starts and lazy loads file content into memory - at first http request.
 File validation and error handling was also added:
@@ -43,6 +43,7 @@ File validation and error handling was also added:
 - when the N number of routes is different from routes reads into memory the http response will be string message "File has wrong format!"
 - when files contains not valid integers the http response will be string message "File has wrong format!"
 - when params in url are not integers http response will be string message "Parameters must be integers!"
+- for others errors the default spring boot page will be displayed
 
 Errors are logged into bus-route-microservice\src\main\resources\log\busroute.log.
 
